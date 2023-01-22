@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://art/backgrounds/top_UI.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/top_ui.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/A52方正卡通简体 2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://art/Score Bar Background.png" type="Texture" id=4]
+[ext_resource path="res://art/Score Bar Fill.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 96
+font_data = ExtResource( 3 )
+
+[node name="top_ui" type="TextureRect"]
+margin_right = 576.0
+margin_bottom = 192.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -175.0
+margin_right = -22.0
+margin_bottom = -15.0
+custom_constants/margin_top = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_top = 4.0
+margin_right = 533.0
+margin_bottom = 160.0
+custom_constants/separation = 46
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_right = 150.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 150.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 2 )
+text = "000"
+align = 1
+
+[node name="TextureProgress" type="TextureProgress" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 30.0
+margin_right = 150.0
+margin_bottom = 59.0
+value = 50.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+
+[node name="CounterLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_left = 196.0
+margin_right = 341.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "00"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 387.0
+margin_right = 533.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1

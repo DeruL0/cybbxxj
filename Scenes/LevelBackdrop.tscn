@@ -1,0 +1,266 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://art/backgrounds/map.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/LevelBackdrop.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/LevelButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Cloud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://art/Cities/LanZhou/LanZhouLevelButtonBlocked.png" type="Texture" id=5]
+[ext_resource path="res://art/Cities/LanZhou/LZLevelButton.png" type="Texture" id=6]
+[ext_resource path="res://art/Cities/DingXi/DXLevelButton.png" type="Texture" id=7]
+[ext_resource path="res://art/Cities/DingXi/DXLevelButtonBlocked.png" type="Texture" id=8]
+[ext_resource path="res://art/Cities/JiuQuan/cloud4.png" type="Texture" id=9]
+[ext_resource path="res://art/Cities/ZhangYe/cloud3.png" type="Texture" id=10]
+[ext_resource path="res://art/Cities/JiuQuan/JQLevelButtonBlocked.png" type="Texture" id=11]
+[ext_resource path="res://art/Cities/ZhangYe/ZYLevelButton.png" type="Texture" id=12]
+[ext_resource path="res://art/Cities/ZhangYe/ZYLevelButtonBlocked.png" type="Texture" id=13]
+[ext_resource path="res://art/Cities/DunHuang/DHLevelButton.png" type="Texture" id=14]
+[ext_resource path="res://art/Cities/JiuQuan/JQLevelButton.png" type="Texture" id=15]
+[ext_resource path="res://art/Cities/DunHuang/DHLevelButtonBlocked.png" type="Texture" id=16]
+[ext_resource path="res://art/Cities/DunHuang/cloud5.png" type="Texture" id=17]
+[ext_resource path="res://art/Cities/DingXi/cloud2.png" type="Texture" id=18]
+
+[node name="LevelBackdrop" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -461.0
+margin_right = 21.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( -804, 777 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="LevelButton" parent="." instance=ExtResource( 3 )]
+position = Vector2( 417, 162 )
+scale = Vector2( 0.75, 0.75 )
+level = 1
+level_to_load = "res://Scenes/levels/level_1.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 5 )
+open_texture = ExtResource( 6 )
+
+[node name="LevelButton2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 513, 211 )
+scale = Vector2( 0.75, 0.75 )
+level = 2
+level_to_load = "res://Scenes/levels/level_2.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 5 )
+open_texture = ExtResource( 6 )
+
+[node name="LevelButton3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 382, 281 )
+scale = Vector2( 0.75, 0.75 )
+level = 3
+level_to_load = "res://Scenes/levels/level_3.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 5 )
+open_texture = ExtResource( 6 )
+
+[node name="LevelButton4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 477, 346 )
+scale = Vector2( 0.75, 0.75 )
+level = 4
+level_to_load = "res://Scenes/levels/level_4.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 5 )
+open_texture = ExtResource( 6 )
+
+[node name="LevelButton5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 297, 471 )
+scale = Vector2( 0.75, 0.75 )
+level = 5
+level_to_load = "res://Scenes/levels/level_5.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 8 )
+open_texture = ExtResource( 7 )
+
+[node name="LevelButton6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 388, 566 )
+scale = Vector2( 0.75, 0.75 )
+level = 6
+level_to_load = "res://Scenes/levels/level_6.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 8 )
+open_texture = ExtResource( 7 )
+
+[node name="LevelButton7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 238, 595 )
+scale = Vector2( 0.75, 0.75 )
+level = 7
+level_to_load = "res://Scenes/levels/level_7.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 8 )
+open_texture = ExtResource( 7 )
+
+[node name="LevelButton8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 179, 777 )
+scale = Vector2( 0.75, 0.75 )
+level = 8
+level_to_load = "res://Scenes/levels/level_8.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 13 )
+open_texture = ExtResource( 12 )
+
+[node name="LevelButton9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 274, 836 )
+scale = Vector2( 0.75, 0.75 )
+level = 9
+level_to_load = "res://Scenes/levels/level_9.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 13 )
+open_texture = ExtResource( 12 )
+
+[node name="LevelButton10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 145, 900 )
+scale = Vector2( 0.75, 0.75 )
+level = 10
+level_to_load = "res://Scenes/levels/level_10.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 13 )
+open_texture = ExtResource( 12 )
+
+[node name="LevelButton11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 243, 939 )
+scale = Vector2( 0.75, 0.75 )
+level = 11
+level_to_load = "res://Scenes/levels/level_11.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 13 )
+open_texture = ExtResource( 12 )
+
+[node name="LevelButton12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 108, 1106 )
+scale = Vector2( 0.75, 0.75 )
+level = 12
+level_to_load = "res://Scenes/levels/level_12.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 11 )
+open_texture = ExtResource( 15 )
+
+[node name="LevelButton13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 211, 1152 )
+scale = Vector2( 0.75, 0.75 )
+level = 13
+level_to_load = "res://Scenes/levels/level_13.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 11 )
+open_texture = ExtResource( 15 )
+
+[node name="LevelButton14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 116, 1228 )
+scale = Vector2( 0.75, 0.75 )
+level = 14
+level_to_load = "res://Scenes/levels/level_14.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 11 )
+open_texture = ExtResource( 15 )
+
+[node name="LevelButton15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 222, 1261 )
+scale = Vector2( 0.75, 0.75 )
+level = 15
+level_to_load = "res://Scenes/levels/level_15.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 11 )
+open_texture = ExtResource( 15 )
+
+[node name="LevelButton16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 160, 1437 )
+scale = Vector2( 0.75, 0.75 )
+level = 16
+level_to_load = "res://Scenes/levels/level_16.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 16 )
+open_texture = ExtResource( 14 )
+
+[node name="LevelButton17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 272, 1429 )
+scale = Vector2( 0.75, 0.75 )
+level = 17
+level_to_load = "res://Scenes/levels/level_17.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 16 )
+open_texture = ExtResource( 14 )
+
+[node name="LevelButton18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 221, 1540 )
+scale = Vector2( 0.75, 0.75 )
+level = 18
+level_to_load = "res://Scenes/levels/level_18.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 16 )
+open_texture = ExtResource( 14 )
+
+[node name="LevelButton19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 340, 1527 )
+scale = Vector2( 0.75, 0.75 )
+level = 19
+level_to_load = "res://Scenes/levels/level_19.tscn"
+enabled = false
+score_goal_met = false
+blocked_texture = ExtResource( 16 )
+open_texture = ExtResource( 14 )
+
+[node name="CloudDX" parent="." instance=ExtResource( 4 )]
+position = Vector2( 25, 306 )
+level = 5
+cloud_tex = ExtResource( 10 )
+
+[node name="CloudDX2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 131, 462 )
+level = 5
+cloud_tex = ExtResource( 9 )
+
+[node name="CloudZY" parent="." instance=ExtResource( 4 )]
+position = Vector2( 153, 602 )
+level = 8
+cloud_tex = ExtResource( 17 )
+
+[node name="CloudZY2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -29, 687 )
+level = 8
+cloud_tex = ExtResource( 9 )
+
+[node name="CloudZY3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 27, 812 )
+level = 8
+cloud_tex = ExtResource( 9 )
+
+[node name="CloudJQ" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, 970 )
+level = 12
+cloud_tex = ExtResource( 17 )
+
+[node name="CloudJQ2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -43, 1097 )
+level = 12
+cloud_tex = ExtResource( 18 )
+
+[node name="CloudDH" parent="." instance=ExtResource( 4 )]
+position = Vector2( -59, 1268 )
+level = 16
+cloud_tex = ExtResource( 10 )
+
+[node name="CloudDH2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 86, 1395 )
+level = 16
+cloud_tex = ExtResource( 17 )

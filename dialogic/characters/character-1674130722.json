@@ -1,0 +1,21 @@
+{
+	"color": "#ffd4b698",
+	"description": "",
+	"display_name": "潮宝宝",
+	"display_name_bool": true,
+	"id": "character-1674130722.json",
+	"mirror_portraits": false,
+	"name": "潮宝宝",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://art/characters/CBB.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1674132149.cfg"
+}

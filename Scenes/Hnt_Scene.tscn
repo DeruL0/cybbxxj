@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://art/backgrounds/background.jpg" type="Texture" id=1]
+[ext_resource path="res://Scripts/Hnt_Scene.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/A52方正卡通简体 2.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://art/backgrounds/collectionbg.png" type="Texture" id=6]
+[ext_resource path="res://art/Pieces/Rainbow.png" type="Texture" id=8]
+[ext_resource path="res://art/backgrounds/continue2.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 3 )
+
+[node name="Hint_Scene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 576.0
+margin_bottom = 1048.0
+rect_min_size = Vector2( 528, 1024 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 124.0
+margin_right = 542.0
+margin_bottom = 914.0
+texture = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 36.0
+margin_top = 175.0
+margin_right = 536.0
+margin_bottom = 827.0
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 500, 108 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "特殊砖块"
+align = 1
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 500.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 500, 0 )
+alignment = 1
+
+[node name="icon" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 202.0
+margin_right = 298.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Intro" type="Label" parent="VBoxContainer"]
+margin_top = 212.0
+margin_right = 500.0
+margin_bottom = 488.0
+rect_min_size = Vector2( 276, 276 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "在游玩过程中可能会出现一些特殊方块，它们将对潮遗宝贝们的非遗之旅有所帮助"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+margin_top = 492.0
+margin_right = 500.0
+margin_bottom = 620.0
+rect_min_size = Vector2( 128, 128 )
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

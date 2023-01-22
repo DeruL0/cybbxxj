@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/CollectionScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Pieces/ZhangYe/2.png" type="Texture" id=2]
+
+[node name="CollectionScene" instance=ExtResource( 1 )]
+
+[node name="Name" parent="VBoxContainer" index="0"]
+text = "河西宝卷"
+
+[node name="icon" parent="VBoxContainer" index="1"]
+texture = ExtResource( 2 )
+
+[node name="Intro" parent="VBoxContainer" index="2"]
+margin_bottom = 523.0
+text = "唐代敦煌变文、俗讲以及宋代说经的基础上发展而成的一种民间吟唱的俗文学
+继承同时将之进一步民族化、地方化和民间化，使其成为中国民间讲唱文学的一种形式"
+
+[node name="TextureButton" parent="VBoxContainer" index="3"]
+margin_top = 527.0
+margin_bottom = 655.0

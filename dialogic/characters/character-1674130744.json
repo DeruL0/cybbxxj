@@ -1,0 +1,21 @@
+{
+	"color": "#ff7f4a28",
+	"description": "",
+	"display_name": "遗宝宝",
+	"display_name_bool": true,
+	"id": "character-1674130744.json",
+	"mirror_portraits": false,
+	"name": "遗宝宝",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://art/characters/YBB.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1674132149.cfg"
+}

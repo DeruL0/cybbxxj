@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://art/Obstacles/Ice.png" type="Texture" id=1]
+[ext_resource path="res://art/backgrounds/background.jpg" type="Texture" id=2]
+[ext_resource path="res://art/Obstacles/Concrete.png" type="Texture" id=3]
+[ext_resource path="res://art/Obstacles/Slime.png" type="Texture" id=4]
+[ext_resource path="res://art/Obstacles/Locks.png" type="Texture" id=5]
+[ext_resource path="res://art/backgrounds/continue2.png" type="Texture" id=6]
+[ext_resource path="res://art/backgrounds/back2.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Hnt_Scene.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/A52方正卡通简体 2.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://art/backgrounds/collectionbg.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 9 )
+
+[node name="Hint_Scene" type="Node2D"]
+script = ExtResource( 8 )
+scene_to_load = "res://Scenes/hint_scenes/Hint_Scene3.tscn"
+scene_to_load1 = "res://Scenes/hint_scenes/Hint_Scene1.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 576.0
+margin_bottom = 1048.0
+rect_min_size = Vector2( 528, 1024 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 124.0
+margin_right = 542.0
+margin_bottom = 914.0
+texture = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 36.0
+margin_top = 175.0
+margin_right = 536.0
+margin_bottom = 827.0
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 500, 108 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "障碍方块"
+align = 1
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 500.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 500, 0 )
+alignment = 1
+
+[node name="icon" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 52.0
+margin_right = 148.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="icon2" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 152.0
+margin_right = 248.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="icon3" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 252.0
+margin_right = 348.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="icon4" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 352.0
+margin_right = 448.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Intro" type="Label" parent="VBoxContainer"]
+margin_top = 212.0
+margin_right = 500.0
+margin_bottom = 488.0
+rect_min_size = Vector2( 276, 276 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "在游玩过程中可能会出现一些障碍方块，它们将对潮遗宝贝们的非遗之旅产生阻碍"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 492.0
+margin_right = 500.0
+margin_bottom = 620.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 112.0
+margin_right = 240.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 260.0
+margin_right = 388.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

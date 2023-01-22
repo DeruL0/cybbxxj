@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/game_window.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Obstacles/Ice.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/Pieces/LanZhou/2.png" type="Texture" id=4]
+
+[node name="level_1" instance=ExtResource( 1 )]
+position = Vector2( 0, 0 )
+
+[node name="GameManager" parent="." index="0"]
+level = 2
+max_score = 1200
+
+[node name="Goal" parent="GameManager/GoalHolder" index="0"]
+goal_texture = ExtResource( 4 )
+max_needed = 15
+goal_string = "LZ2"
+
+[node name="Goal2" parent="GameManager/GoalHolder" index="1" instance=ExtResource( 3 )]
+goal_texture = ExtResource( 2 )
+max_needed = 2
+goal_string = "ice"
+
+[node name="grid" parent="." index="3"]
+ice_spaces = PoolVector2Array( 4, 4, 5, 5, 5, 4, 4, 5 )
+possible_pieces = PoolStringArray( "res://Scenes/pieces/LZ1.tscn", "res://Scenes/pieces/LZ2.tscn", "res://Scenes/pieces/LZ3.tscn", "res://Scenes/pieces/LZ4.tscn" )
+
+[node name="Game Win Screen" parent="." index="12"]
+level = 2
+knowledge_to_load = "res://Scenes/collection_scenes/LZ2.tscn"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/CollectionScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Pieces/LanZhou/4.png" type="Texture" id=2]
+
+[node name="CollectionScene" instance=ExtResource( 1 )]
+
+[node name="VBoxContainer" parent="." index="2"]
+margin_left = 37.0
+margin_right = 537.0
+margin_bottom = 852.0
+
+[node name="Name" parent="VBoxContainer" index="0"]
+text = "羊皮筏子"
+
+[node name="icon" parent="VBoxContainer" index="1"]
+texture = ExtResource( 2 )
+
+[node name="Intro" parent="VBoxContainer" index="2"]
+margin_bottom = 523.0
+text = "俗称排子，由十几个气鼓鼓的山羊皮“浑脱” 组成
+可在河道上作为载客的渡船，距今已有1700多年历史
+是黄河沿岸民间保留下来的一种古老的摆渡工具"
+
+[node name="TextureButton" parent="VBoxContainer" index="3"]
+margin_top = 527.0
+margin_bottom = 655.0

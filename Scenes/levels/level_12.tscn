@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/game_window.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Pieces/JiuQuan/1.png" type="Texture" id=2]
+[ext_resource path="res://art/Slime.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Goal.tscn" type="PackedScene" id=4]
+
+[node name="game_window" instance=ExtResource( 1 )]
+
+[node name="GameManager" parent="." index="0"]
+level = 12
+max_counter = 80
+max_score = 2500
+
+[node name="Goal" parent="GameManager/GoalHolder" index="0"]
+goal_texture = ExtResource( 2 )
+max_needed = 36
+goal_string = "JQ1"
+
+[node name="Goal2" parent="GameManager/GoalHolder" index="1" instance=ExtResource( 4 )]
+goal_texture = ExtResource( 3 )
+max_needed = 18
+goal_string = "slime"
+
+[node name="grid" parent="." index="3"]
+slime_spaces = PoolVector2Array( 0, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 0, 4, 1, 4, 2, 4, 3, 4, 4, 4, 5, 4, 6, 4, 7, 4, 0, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 6, 7, 7, 7 )
+possible_pieces = PoolStringArray( "res://Scenes/pieces/JQ1.tscn", "res://Scenes/pieces/JQ2.tscn", "res://Scenes/pieces/JQ3.tscn", "res://Scenes/pieces/JQ4.tscn" )
+
+[node name="Game Win Screen" parent="." index="12"]
+level = 12
+knowledge_to_load = "res://Scenes/collection_scenes/JQ1.tscn"

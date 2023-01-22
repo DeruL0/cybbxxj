@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Piece.tscn" type="PackedScene" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/Sinker v3.png-211f82d14ff0976478b75ee6da0eb130.stex"
+
+[node name="Sinker" instance=ExtResource( 1 )]
+color = "None"
+
+[node name="Sprite" parent="." index="0"]
+texture = SubResource( 1 )

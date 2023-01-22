@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"character": "character-1674130980.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "恭喜您通关潮遗宝贝西行纪！"
+		},
+		{
+			"character": "character-1674130980.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "浩浩历史长河，熊熊文明薪火，中华文化源远流长。"
+		},
+		{
+			"character": "character-1674130980.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "滚滚黄河经千百年的冲刷洗礼与不断交流、融合以及沉淀，孕育出了丰富多彩的甘肃文化，滋养着甘肃这片广袤大地。"
+		},
+		{
+			"character": "character-1674130980.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "非遗保护传承任重道远，我们要积极行动起来，让“非遗”在保护和传承中绽放光彩。"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1674134477.json",
+		"name": "all_end"
+	}
+}

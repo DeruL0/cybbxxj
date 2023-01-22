@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/CollectionScene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Pieces/DingXi/2.png" type="Texture" id=2]
+
+[node name="CollectionScene" instance=ExtResource( 1 )]
+position = Vector2( -11, 38 )
+
+[node name="Name" parent="VBoxContainer" index="0"]
+text = "临洮洮砚"
+
+[node name="icon" parent="VBoxContainer" index="1"]
+texture = ExtResource( 2 )
+
+[node name="Intro" parent="VBoxContainer" index="2"]
+text = "琴棋书画，笔墨纸砚，文人标配不过如此
+一盏好砚是决定书写流畅的基础。古代文人墨客挥毫落纸，写诗作赋也都离不开一盏好砚"

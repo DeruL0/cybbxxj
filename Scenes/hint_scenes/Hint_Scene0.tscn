@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Hnt_Scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/Pieces/LanZhou/1.png" type="Texture" id=2]
+
+[node name="Hint_Scene" instance=ExtResource( 1 )]
+scene_to_load = "res://Scenes/hint_scenes/Hint_Scene1.tscn"
+
+[node name="Name" parent="VBoxContainer" index="0"]
+text = "游戏玩法"
+
+[node name="icon" parent="VBoxContainer/HBoxContainer2" index="0"]
+margin_left = 102.0
+margin_right = 198.0
+texture = ExtResource( 2 )
+
+[node name="icon2" type="TextureRect" parent="VBoxContainer/HBoxContainer2" index="1"]
+margin_left = 202.0
+margin_right = 298.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="icon3" type="TextureRect" parent="VBoxContainer/HBoxContainer2" index="2"]
+margin_left = 302.0
+margin_right = 398.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 96, 96 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="Intro" parent="VBoxContainer" index="2"]
+text = "将三个及以上相同的非遗元素连在一起即可将其消除，以此来达成一定目标来过关吧"

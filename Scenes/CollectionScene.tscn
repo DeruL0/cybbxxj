@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://art/backgrounds/background.jpg" type="Texture" id=1]
+[ext_resource path="res://art/backgrounds/collectionbg.png" type="Texture" id=2]
+[ext_resource path="res://art/Pieces/LanZhou/1.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/A52方正卡通简体 2.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://art/backgrounds/collections.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/CollectionScene.gd" type="Script" id=6]
+[ext_resource path="res://art/backgrounds/level_select.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 4 )
+
+[node name="CollectionScene" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 576.0
+margin_bottom = 1048.0
+rect_min_size = Vector2( 528, 1024 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 124.0
+margin_right = 542.0
+margin_bottom = 914.0
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 36.0
+margin_top = 175.0
+margin_right = 536.0
+margin_bottom = 827.0
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+margin_right = 500.0
+margin_bottom = 108.0
+rect_min_size = Vector2( 500, 108 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "兰州牛肉面"
+align = 1
+valign = 1
+
+[node name="icon" type="TextureRect" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 500.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 128, 128 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Intro" type="Label" parent="VBoxContainer"]
+margin_top = 244.0
+margin_right = 500.0
+margin_bottom = 520.0
+rect_min_size = Vector2( 276, 276 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "兰州牛肉面始于清嘉庆年间
+被誉为“中华第一面”
+有“一清、二白、三红、四绿、五黄”五大特点"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 524.0
+margin_right = 500.0
+margin_bottom = 652.0
+rect_min_size = Vector2( 500, 128 )
+custom_constants/separation = 30
+alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 107.0
+margin_right = 235.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 96 )
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+margin_left = 265.0
+margin_right = 393.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
